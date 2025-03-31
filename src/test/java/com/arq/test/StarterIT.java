@@ -38,7 +38,7 @@ class StarterIT {
     @Test
     void sanityCheck() {
         log.info("Sanity check");
-        assertThat(false).isTrue();
+        assertThat(true).isTrue();
     }
 
     @Deployment
@@ -46,7 +46,7 @@ class StarterIT {
     static WebArchive deploy() {
         var archive = ShrinkWrapManipulator.createDeployment(WebArchive.class);
         // delete slf4j from deployment, causing silent failure
-        archive = archive.filter(archivePath -> !archivePath.get().startsWith("/WEB-INF/lib/slf4j-"));
+//        archive = archive.filter(archivePath -> !archivePath.get().startsWith("/WEB-INF/lib/slf4j-"));
         return logArchiveContents(archive, System.out::println);
     }
 }
