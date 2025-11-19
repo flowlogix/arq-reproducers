@@ -17,10 +17,8 @@
 
     <properties>
         <!-- Override target java release -->
-        <!-- <maven.compiler.release>23</maven.compiler.release> -->
         <flowlogix.depchain.version>100</flowlogix.depchain.version>
         <flowlogix.version>10.0.8</flowlogix.version>
-        <arquillian.graphene.version>3.0.0-alpha.4</arquillian.graphene.version>
         <arquillian.payara.version>3.1</arquillian.payara.version>
         <checkstyle.suppressionsLocation>${basedir}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <checkstyle.headerLocation>${basedir}/src/checkstyle/apache-header.txt</checkstyle.headerLocation>
@@ -53,7 +51,7 @@
         <dependency>
             <groupId>org.jboss.arquillian.graphene</groupId>
             <artifactId>graphene-webdriver</artifactId>
-            <version>${arquillian.graphene.version}</version>
+            <version>3.0.0-20250814</version>
             <scope>test</scope>
             <type>pom</type>
         </dependency>
@@ -71,7 +69,7 @@
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>4.0.8</version>
+            <version>5.0.0-B11</version>
             <scope>provided</scope>
         </dependency>
 
