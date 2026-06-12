@@ -17,9 +17,6 @@
 
     <properties>
         <!-- Override target java release -->
-        <flowlogix.depchain.version>122</flowlogix.depchain.version>
-        <flowlogix.version>11</flowlogix.version>
-        <arquillian.payara.version>3.1</arquillian.payara.version>
         <checkstyle.suppressionsLocation>${basedir}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <checkstyle.headerLocation>${basedir}/src/checkstyle/apache-header.txt</checkstyle.headerLocation>
         <!-- Turn off maven build cache -->
@@ -45,7 +42,7 @@
         <dependency>
             <groupId>com.flowlogix.depchain</groupId>
             <artifactId>integration-test</artifactId>
-            <version>${flowlogix.depchain.version}</version>
+            <version>123</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -56,50 +53,19 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>fish.payara.arquillian</groupId>
-            <artifactId>arquillian-payara-server-remote</artifactId>
-            <version>${arquillian.payara.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>5.0.0-B13</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.flowlogix</groupId>
             <artifactId>flowlogix-jee</artifactId>
-            <version>${flowlogix.version}</version>
+            <version>11.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.omnifaces</groupId>
             <artifactId>omnifaces</artifactId>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.flowlogix</groupId>
-                <artifactId>flowlogix-bom</artifactId>
-                <version>${flowlogix.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-bom</artifactId>
-                <version>4.44.0</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>
