@@ -18,22 +18,19 @@
  */
 package com.arq.test;
 
-import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
+import com.flowlogix.test.AppServerLifecycle;
 import com.flowlogix.util.ShrinkWrapManipulator;
 import lombok.extern.slf4j.Slf4j;
 import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import static com.flowlogix.util.ShrinkWrapManipulator.logArchiveContents;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(PayaraServerLifecycleExtension.class)
-@ExtendWith(ArquillianExtension.class)
-@ArquillianSuiteDeployment
 @Slf4j
+@AppServerLifecycle
+@ArquillianSuiteDeployment
 class StarterIT {
     @Test
     void sanityCheck() {
