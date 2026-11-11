@@ -16,7 +16,6 @@
     </parent>
 
     <properties>
-        <flowlogix.bom.version>56</flowlogix.bom.version>
         <!-- Override target java release -->
         <checkstyle.suppressionsLocation>${basedir}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
         <checkstyle.headerLocation>${basedir}/src/checkstyle/apache-header.txt</checkstyle.headerLocation>
@@ -75,7 +74,7 @@
             <dependency>
                 <groupId>com.flowlogix</groupId>
                 <artifactId>flowlogix-bom</artifactId>
-                <version>${flowlogix.bom.version}</version>
+                <version>56</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
